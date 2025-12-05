@@ -1,0 +1,32 @@
+INIT MASTER(S)
+NASTRAN SYSTEM(442)=-1,SYSTEM(319)=1
+ID test,FEMAP
+SOL SEMODES
+CEND
+  ECHO = NONE
+  DISPLACEMENT(PLOT) = ALL
+  SPCFORCE(PLOT) = ALL
+  ESE(PLOT) = ALL
+  METHOD = 1
+BEGIN BULK
+$ ***************************************************************************
+$   Written by : Femap
+$   Version    : 2022.2.0
+$   Translator : Simcenter Nastran
+$   From Model : C:\Users\alessandro.vignola\gitFEMAP\test.modfem
+$   From Group : 1..Group 1
+$   Date       : Fri Dec  5 12:52:57 2025
+$   Output To  : C:\Users\alessandro.vignola\gitFEMAP\
+$ ***************************************************************************
+$
+PARAM,PRGPST,NO
+PARAM,POST,-1
+PARAM,OGEOM,NO
+PARAM,AUTOSPC,YES
+PARAM,GRDPNT,0
+EIGRL          1                      10       0                    MASS
+CORD2C         1       0      0.      0.      0.      0.      0.      1.+FEMAPC1
++FEMAPC1      1.      0.      1.        
+INCLUDE 'C:\Users\alessandro.vignola\gitFEMAP\temp_bdfs\Group 1.bdf'
+INCLUDE 'C:\Users\alessandro.vignola\gitFEMAP\temp_bdfs\Group 2.bdf'
+ENDDATA
